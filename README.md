@@ -41,9 +41,11 @@ _For exact versions, check `requirements.txt`_.
 ## Instructions
 
 ```bash
-git clone 
-cd 
+git clone https://github.com/g-nitin/nn-sin-approximation.git
+cd nn-sin-approximation
 pip install -r requirements.txt
+
+python3 main.py
 ```
 
 ## Directory Structure
