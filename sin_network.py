@@ -37,6 +37,8 @@ def train_nnet(train_loader, batch_size: int) -> nn.Module:
     num_iters: int = 1
     for epoch in range(num_iters):
         running_loss: float = 0.0
+        loss_every: int = len(train_loader.dataset) // 100
+        print(f'Printing loss statistics every {loss_every} losses')
 
         for i, data in enumerate(train_loader):
             inputs, labels = data
@@ -52,7 +54,6 @@ def train_nnet(train_loader, batch_size: int) -> nn.Module:
 
             # print statistics
             running_loss += loss.item()
-            loss_every = 20
             if i % loss_every == loss_every - 1:  # print after every `loss_every` mini-batches
                 print(f'[{epoch + 1}, {i + 1:5d}] loss: {running_loss / loss_every:.3f}')
                 running_loss = 0.0

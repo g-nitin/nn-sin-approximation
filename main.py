@@ -1,7 +1,7 @@
 import time
 from torch.nn import Module
 from torch.utils.data import DataLoader, TensorDataset
-from torch import Tensor, rand, sin
+from torch import Tensor, rand, sin, save
 from math import pi
 from sklearn.model_selection import train_test_split
 
@@ -38,6 +38,8 @@ def main():
     print('Time', time.time() - start_time)
 
     plot_prediction(nnet, training_size=n)
+
+    save(nnet.state_dict(), f'models/sin_net_{n}')
 
 
 if __name__ == "__main__":
