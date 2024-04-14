@@ -53,3 +53,4 @@ python3 main.py
 - `utilities.py` contains helper functions to plot the predictions.
 - `main.py` contains the main function.
 - The `plots` subfolder contains different plots created by various training sizes.
+- The `models` subfolder contains the various models based on the training size.
