@@ -54,3 +54,8 @@ python3 main.py
 - `main.py` contains the main function.
 - The `plots` subfolder contains different plots created by various training sizes.
 - The `models` subfolder contains the various models based on the training size.
+
+## Results
+|                                ![result.png](./plots/xs_vs_ys_all_100000.png)                                 |
+|:----------------------------------------------------------------------------------------------------------------:| 
+| *Actual v. Predicted sin(x)* |
